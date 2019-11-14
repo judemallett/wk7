@@ -5,6 +5,14 @@ function random()
 
 function buttonSubmit()
 {
-    $('#answer').text(random());
-    console.log('test');
+    var rand = random();
+    $('#answer').text(rand);
+    
+    if(rand)
+    {
+        navigator.notification.beep(1);
+    } else
+    {
+        navigator.notification.beep(2);
+    }
 }
